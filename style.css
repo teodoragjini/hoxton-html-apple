@@ -6,22 +6,74 @@
 
 .nav{
     display: grid;
-    grid-template-columns: 100px 1fr;
-    background-color: #313132;
+    grid-auto-flow: column;
+    list-style: none;
+    padding: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    background-color: #333333;
 }
-.nav-item{
-    color: white;
-    text-decoration: none;
+.apple-logo{
+      filter: invert(0.8);
+       width: 15px;
+}
+
+.nav-link{
+  color: #ffffffaa;
+  text-decoration: none;
 }
 
 .unicef{
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    justify-items: center;
     background-color: #f5f5f7;
     padding: 1rem;
     text-align:center;
+    align-items: center;
+}
+
+.unicef-img {
+    justify-self: center;
 }
 
 .donate-link{
     text-decoration: none;
+    justify-self: center;
+}
+
+@media (min-width: 640px) {
+    .unicef {
+        display: block;
+    }
+
+    .unicef-img {
+    }
+
+    .donate-link {
+        justify-self: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-2-style {
+        top: 50%;
+    }
+
+    .footer-main {
+        display: block !important;
+    }
+
+    .footer-mobile {
+        display: none !important;
+    }
+}
+
+.footer-main {
+    display: none;
 }
 
 .donate-link:hover{
@@ -82,13 +134,17 @@ video{
 
 .cards{
     display: grid;
-    grid-template-columns: auto auto;
-
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
 }
+
+
 .card{
     position: relative;
     text-align: center;
+    height: 300px;
 }
+   
 .card-1-style{
   position: absolute;
   top: 60%;
@@ -100,6 +156,7 @@ video{
 .card-link{
     text-decoration: none;
     color:royalblue;
+
 }
 
 .card-link:hover{
@@ -108,7 +165,7 @@ video{
 
 .card-2-style{
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
@@ -120,8 +177,8 @@ video{
 }
 
 .card-3-style{
-    position: absolute;
-  top: 10%;
+  position: absolute;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -134,5 +191,73 @@ video{
 
 .card-3-link:hover{
     text-decoration: underline;
+}
+
+.card-4-style{
+     display: grid;
+     grid-template-rows: auto;
+     justify-items: center;
+}
+
+.test {
+    background: url('https://www.apple.com/v/home/ao/images/promos/watch-series-7/promo_watch_lte__djeaso7ukrsm_large.jpg') repeat 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.text-card{
+    text-decoration: none;
+    margin: 1rem 0;
+}
+    
+.watch-link{
+    text-decoration: none;
+    color: royalblue;
+    margin-right: 1rem;
+}
+
+.footer{
+    background-color: #f5f5f7;
+    padding: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 2rem;
+
+}
+.footer-mobile{
+    display: block;
+    background-color:#f5f5f7;
+}
+
+.footer.mobile div {
+    border-bottom: 1px solid #00000040;
+    padding: 0.5rem;
+  }
+
+.top{
+    text-decoration: none;
+    color: #9f9fa1;
+    padding: 1rem;
+    background-color:  #f5f5f7;
+}
+
+.footer ul{
+    list-style: none;
+}
+.column h4{
+    color:#666668;
+}
+
+.column-link{
+    text-decoration: none;
+    color: #7e7e80;    
+}
+
+.footer-1{
+    background-color:  #f5f5f7;
+
 }
 
